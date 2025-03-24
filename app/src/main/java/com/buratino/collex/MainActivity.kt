@@ -414,7 +414,27 @@ fun ProductColumnView(feedList : List<CategoryRow>, feedState : LazyListState){
 
 @Composable
 fun ProductView(){
-
+    Column {
+        Column {
+            ImageButton(
+                onClick = {},
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(300.dp)
+                    .border(border = BorderStroke(1.dp, Color.Black), shape = RectangleShape)
+            ) {
+                Image(
+                    painter = painterResource(R.drawable.collex),
+                    contentDescription = "Product Image"
+                )
+            }
+            Column {
+                Text("Product Title")
+                Text("Product Price")
+                Text("Product Tags")
+            }
+        }
+    }
 }
 
 @Composable
@@ -496,7 +516,19 @@ fun ExplorePage(options: List<String>, selectedOption: String, onOptionChange : 
 }
 @Composable
 fun OrdersPage(){
-    Text("Orders", fontSize = 3.em)
+    Column {
+        Box {
+            TextButton(onClick = { /*TODO*/ }) {
+                Text("Orders")
+            }
+            TextButton(onClick = { /*TODO*/ }) {
+                Text("Orders")
+            }
+            TextButton(onClick = { /*TODO*/ }) {
+                Text("Orders")
+            }
+        }
+    }
 }
 
 data class ChatConversation(
@@ -539,9 +571,6 @@ fun AccountPage(){
     Text("Account", fontSize = 3.em)
 }
 @Composable
-
-
-
 fun AccountSettingsPage(accountProfile: SettingsAccountProfile){
     Column {
         Row {
@@ -553,13 +582,29 @@ fun AccountSettingsPage(accountProfile: SettingsAccountProfile){
         Row {  }
         Column {
             Column {
+                Text("Account Settings")
+                Row {
+                    TextButton(onClick = { /*TODO*/ }) {
+                        Text("Edit Profile")
+                    }
 
+                }
             }
             Column {
-
+                TextButton(onClick = { /*TODO*/ }) {
+                    
+                }
             }
         }
     }
+}
+@Composable
+fun UserProfilePage(){
+
+}
+@Composable
+fun PublicProfilePage(){
+
 }
 @Composable
 fun PaymentPage(){
