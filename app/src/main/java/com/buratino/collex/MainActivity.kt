@@ -528,6 +528,17 @@ fun OrdersPage(){
                 Text("Orders")
             }
         }
+        Column{
+            LazyColumn {
+                items(10){
+                    Column {
+                        Text("Order")
+                        Text("Order")
+                        Text("Order")
+                    }
+                }
+            }
+        }
     }
 }
 
